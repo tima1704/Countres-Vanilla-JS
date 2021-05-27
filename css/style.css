@@ -540,7 +540,7 @@ body{
     }
     .content_left img{
         position: relative;
-        left: 55px;
+        left: 30git px;
     }
 }
 @media screen and (max-width:420px){

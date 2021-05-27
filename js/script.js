@@ -9,7 +9,6 @@ const americas = document.querySelector('.americas');
 const europe = document.querySelector('.europe');
 const oceania = document.querySelector('.oceania');
 const africa = document.querySelector('.africa');
-
 const routes = {
     all: 'all',
     capital: 'capital',
@@ -74,9 +73,6 @@ const getSix = (region,cb) => {
     });
     xhrsix.send();
 }
-
-// reigon
-
 asia.addEventListener('click' , e=> {
     e.preventDefault();
     getSix(region.asia, res => {
@@ -110,9 +106,6 @@ africa.addEventListener('click' , e=> {
 all.addEventListener('click' , () => {
     window.location.reload();
 })
-
-// search
-
 input_header.addEventListener('input' , e => {
     const value = e.target.value;
     if(!value){
@@ -141,10 +134,6 @@ input_headtwo.addEventListener('input' , e => {
         });
     };
 });
-
-// information
-
-
 function activeMore(url){
     const xhr = new XMLHttpRequest();
     baseInformation = `https://restcountries.eu/rest/v2/name/${url}`;
@@ -168,7 +157,6 @@ function activeMore(url){
                     <button class="btn_info" onclick="infofunc()">back</button>
                 </div>
             </div>
-
             `
         })
         itmes.innerHTML = temp

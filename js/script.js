@@ -9,6 +9,7 @@ const americas = document.querySelector('.americas');
 const europe = document.querySelector('.europe');
 const oceania = document.querySelector('.oceania');
 const africa = document.querySelector('.africa');
+
 const routes = {
     all: 'all',
     capital: 'capital',
@@ -20,9 +21,6 @@ const region = {
     asia: 'asia',
     europe: 'europe',
     oceania: 'oceania',
-}
-const information = {
-    alpha: 'alpha'
 }
 const getapi = (routes,cb) => {
     const xhr = new XMLHttpRequest();

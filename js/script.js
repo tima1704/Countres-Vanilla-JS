@@ -55,8 +55,8 @@ function cardTemp(country){
             <h5>${country.capital}</h5>
         </div>
         <div class="card_footer">
-            <button class="btn_card" onclick="activeMore()">Lern More</button>   
-        </div>  
+            <button class="btn_card" onclick="activeMore('${country.name}')">Lern More</button>   
+        </div>
     </div>
     `
 }
@@ -144,16 +144,37 @@ input_headtwo.addEventListener('input' , e => {
 
 // information
 
-const getinfo = (aboutcountry , cb) => {
+
+function activeMore(url){
     const xhr = new XMLHttpRequest();
-    baseInformation = 'https://restcountries.eu/rest/v2';
-    xhr.open('GET' , `${baseInformation}/alpha/${aboutcountry}`)
+    baseInformation = `https://restcountries.eu/rest/v2/name/${url}`;
+    xhr.open('GET' , `${baseInformation}`)
     xhr.addEventListener('load' , () => {
         const response = JSON.parse(xhr.response);
-        cb(response)
-    });
-    xhr.addEventListener('error' , error => {
-        console.log(error);
+        console.log(response);
+        const temp = response.map(({name,borders,capital,population,timezones,region,flag}) => {
+            return `
+            <div class="content_info">
+                <div class="content_left">
+                    <img src="${flag}">
+                </div>
+                <div class="content_right">
+                    <h1>Country: <span>${name}</span></h1>
+                    <h4>borders: <span>${borders}</span></h4>
+                    <h4>capital: <span>${capital}</span></h4>
+                    <h4>population: <span>${population}</span></h4>
+                    <h4>timezones: <span>${timezones}</span></h4>
+                    <h4>region: <span>${region}</span></h4>
+                    <button class="btn_info" onclick="infofunc()">back</button>
+                </div>
+            </div>
+
+            `
+        })
+        itmes.innerHTML = temp
     });
     xhr.send();
+}
+function infofunc(){
+    window.location.reload()
 }

@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    width: 100%;
+
+    font-family: 'Rubik', sans-serif;
+}
+
+/* top header */
+
+.top_nav{
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    background-color: #51af85;
+    color: rgba(255, 255, 255, 0.87);
+}
+.top_nav span a{
+    text-decoration: underline;
+    color: #baebd5;
+    font-size: 13px;
+}
+.general_header{
+    background-color: #42b983;
+    border-top: solid rgba(255, 255, 255, 0.11);
+}
+
+/* mid content */
+
+.content_header{
+    display: flex;
+    box-shadow: 0px 3px 25px #42b983;
+    justify-content: center;
+}
+.content_header ul{
+    display: flex;
+    list-style: none;
+}
+.content_header ul li{
+    margin: 5px 50px;
+}
+.content_header ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.897);
+}
+
+/* bottom content header */
+
+.content_bottom_header h3{
+    font-size: 23px;
+    text-align: center;
+}
+
+.left_content img{
+    width: 60px;
+}
+.content_bottom_header{
+    margin-top: 20px;
+}
+.content_right_header input{
+    width: 170px;
+    height: 20px;
+    padding-left: 10px;
+    border: solid rgba(128, 128, 128, 0.342) 2px;
+    outline: none;
+    border-radius: 20px;
+    color: #42b983;
+    padding-right: 30px;
+    margin-top: 15px;
+}
+.input_headtwo{
+    width: 170px;
+    height: 20px;
+    padding-left: 10px;
+    border: solid rgba(128, 128, 128, 0.342) 2px;
+    outline: none;
+    border-radius: 20px;
+    color: #42b983;
+    padding-right: 30px;
+    margin-top: 15px;
+}
+
+/* searh input header */
+
+.fas{
+    cursor: pointer;
+    position: absolute;
+    left: 78%;
+    top: 145px;
+    color: #aaadac;
+}
+.content_bottom_header{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* main */
+
+.content_main{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+.left_content_main img{
+    width: 300px;
+    height: 280px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 100px #51af85;
+}
+.left_content_main{
+    margin-top: 10px;
+}
+.right_content_main{
+    width: 30%;
+    text-align: left;
+    margin-left: 150px;
+}
+.right_content_main p{
+    font-weight: 300;
+    line-height: 1.3;
+    color: #57977a;
+}
+
+/* line down */
+
+.line_down{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+.line_down i{
+    font-size: 30px;
+    color: #42b983;
+}
+
+/* content countres */
+
+.content_main_countres{
+    margin-top: 180px;
+}
+.itmes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 250px;
+    margin: 15px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    border: 2px solid #51af85;
+    text-align: center;
+    border-radius: 20px;
+}
+.card button{
+    width: 150px;
+    height: 30px;
+    border: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    background: #51af85;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.card_body h1{
+    font-size: 20px;
+}
+.card_header img{
+    width: 200px;
+    height: 100px;
+}
+
+/* info content */
+.content_info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    bottom: 100px;
+}
+.content_right{
+    padding-top: 15px;
+}
+.content_tightTwo{
+    padding-top: 15px;
+}
+.info_button{
+    display: flex;
+    flex-direction: column;
+}
+.info_button button{
+    width: 130px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #27d687e1;
+    color: #fff;
+}
+.content_left img{
+    width: 400px;
+    height: 250px;
+}
+.content_info h3{
+    color: rgb(175, 175, 175);
+    font-weight: 300;
+}
+.content_info span{
+    color: #27d687;
+}
+.content_info h4{
+    color: rgb(175, 175, 175);
+    font-weight: 300;
+}
+
+/* active */
+
+.itmes.activeItems{
+    display: none;
+}
+.content_main.activeMain{
+    display: none;
+}
+.line_down.activeDown{
+    display: none;
+}
